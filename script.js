@@ -3,33 +3,6 @@
 // // il valore precedentemente salvato (se presente). Mostra sopra l’input field il valore precedentemente salvato,
 // // se presente.
 
-// const form = document.querySelector("form");
-// const deleteBtn = document.getElementById("deleteBtn")
-// const saveBtn = document.getElementById("saveBtn")
-// const usernameField = document.getElementById("usernameField")
-
-// const FORM_MEMORY = "form-memory";
-
-// form.addEventListener("submit", (event) =>{
-//     event.preventDefault()
-
-//     const username = usernameField.value
-//     localStorage.setItem(FORM_MEMORY, username);
-
-//   console.log("SALVATO");
-// })
-
-// saveBtn.addEventListener("click", ()=>{
-//     console.log("loading username...");
-
-//     const savedUsername = localStorage.getItem(FORM_MEMORY);
-//     if (savedUsername) {
-//         usernameField.value = savedUsername;
-//       } else {
-//         alert("Please, insert a username and try again");
-//       }
-// })
-
 const form = document.querySelector("form");
 const deleteBtn = document.getElementById("deleteBtn");
 const saveBtn = document.getElementById("saveBtn");
@@ -49,11 +22,9 @@ saveBtn.addEventListener("click", () => {
   const savedUsername = localStorage.getItem(FORM_MEMORY);
   if (savedUsername) {
     usernameField.value = savedUsername;
-    console.log(usernameField.value);
   } else {
     alert("Please, insert a username and try again");
   }
-  form.reset();
 });
 
 deleteBtn.addEventListener("click", () => {
